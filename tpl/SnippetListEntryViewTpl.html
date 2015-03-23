@@ -1,0 +1,13 @@
+<li role="presentation" class="active" data-modelid="<%= id %>">
+    <div class="entry">
+        <h3>Name: <span class="label label-primary"><%= name %></span>
+            <span class="button-span">
+                <a class="viewButton" data-modelId="<%= id %>"><span class="glyphicon glyphicon-eye-open"/></a>
+                <a class="editButton" style="display: none;" data-modelId="<%= id %>"><span class="glyphicon glyphicon-edit"/></a>
+                <a class="removeButton" style="display: none;" data-modelId="<%= id %>"><span class="glyphicon glyphicon-remove"/></a>
+            </span>
+        </h3>
+        <h5>Author: <span class="label label-default"><%= author %></span></h5>
+        <h5>Creation Date: <span class="label label-default"><%= window.SnippetUtils.getDateAsString(new Date(creationDate)) %></span></h5>
+        <h5>Description: <span class="label label-default"><%= window.SnippetUtils.slugify(description) %></span></h5>
+</div></li>

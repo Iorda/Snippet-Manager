@@ -1,0 +1,29 @@
+<div class="modal" id="editorModal" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Snippet Editor</h4>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Name</span>
+                    <input type="text" class="form-control snippetName" placeholder="Place name here" value="<%= name %>">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon2">Code</span>
+                    <textarea class="form-control snippetCode" rows="3" placeholder="Place code here"><%= code %></textarea>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Description</span>
+                    <textarea class="form-control snippetDescription" rows="3" placeholder="Place code here"><%= description %></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary saveSnippetButton">Save</button>
+                <button type="button" class="btn btn-default modal-last-button" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>e
+</div>

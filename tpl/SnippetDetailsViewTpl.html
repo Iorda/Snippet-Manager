@@ -1,0 +1,25 @@
+<div class="modal" id="detailsModal" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel"><%= name %></h4>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="choiceButton active"><a>Code</a></li>
+                    <li role="presentation" class="choiceButton"><a>Description</a></li>
+                    <li role="presentation" class="choiceButton"><a>Info</a></li>
+                </ul>
+                <br>
+                <div>
+                    <label class="primary"><%= code %></label>
+                    <br>
+                    <label class="secondary"></label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-last-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

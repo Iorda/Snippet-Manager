@@ -1,0 +1,24 @@
+body {
+background: url(../images/Blue-Background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+textarea {
+    resize: none;
+}
+
+.entry {
+    background-color: #ddf;
+    display: none;
+    border: 2px solid;
+    border-radius: 25px;
+}
+
+.button-span {
+    float:right;
+    padding-right: 10px;
+    padding-left: 10px;
+}
