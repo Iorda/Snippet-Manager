@@ -26,6 +26,7 @@ define(function(require) {
                 window.context.find("#detailsModal").on('hidden.bs.modal', function () {
                     window.context.find("#detailsModal").remove();
                 });
+                $(this.el).find(".primary").append(decodeURI(this.model.get("code")));
 			},
 
             //changes the text based on which tab is pressed
@@ -38,11 +39,12 @@ define(function(require) {
                 var type = $($(arguments[0].currentTarget)[0].children[0]).text();
                 switch(type) {
                     case "Code":
-                        $(this.el).find(".primary").text(this.model.get("code"));
+                        $(this.el).find(".primary").text("");
                         $(this.el).find(".secondary").text("");
+                        $(this.el).find(".primary").append(decodeURI(this.model.get("code")));
                         break;
                     case "Description":
-                        $(this.el).find(".primary").text(this.model.get("description"));
+                        $(this.el).find(".primary").text(decodeURI(this.model.get("description")));
                         $(this.el).find(".secondary").text("");
                         break;
                     case "Info":

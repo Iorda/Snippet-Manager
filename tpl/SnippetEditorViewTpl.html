@@ -3,21 +3,22 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel">Snippet Editor</h4>
+                <h6 class="modal-title" id="myModalLabel">Please html and javascript code only in the Code section</h6>
             </div>
             <div class="modal-body">
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">Name</span>
-                    <input type="text" class="form-control snippetName" placeholder="Place name here" value="<%= name %>">
+                    <input type="text" class="form-control snippetName" placeholder="Place name here" value="<%= decodeURI(name) %>">
                 </div>
                 <br>
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon2">Code</span>
-                    <textarea class="form-control snippetCode" rows="3" placeholder="Place code here"><%= code %></textarea>
+                    <textarea class="form-control snippetCode" rows="3" placeholder="Place code here"><%= decodeURI(code) %></textarea>
                 </div>
                 <br>
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">Description</span>
-                    <textarea class="form-control snippetDescription" rows="3" placeholder="Place code here"><%= description %></textarea>
+                    <textarea class="form-control snippetDescription" rows="3" placeholder="Place code here"><%= decodeURI(description) %></textarea>
                 </div>
             </div>
             <div class="modal-footer">

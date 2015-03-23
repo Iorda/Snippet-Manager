@@ -9,5 +9,5 @@
         </h3>
         <h5>Author: <span class="label label-default"><%= author %></span></h5>
         <h5>Creation Date: <span class="label label-default"><%= window.SnippetUtils.getDateAsString(new Date(creationDate)) %></span></h5>
-        <h5>Description: <span class="label label-default"><%= window.SnippetUtils.slugify(description) %></span></h5>
+        <h5>Description: <span class="label label-default"><%= window.SnippetUtils.slugify(decodeURI(description)) %></span></h5>
 </div></li>

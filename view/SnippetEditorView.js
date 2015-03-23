@@ -35,15 +35,15 @@ define(function(require) {
             //if it creates a snippet collection.create must used with an object(not model)
             saveSnippet: function() {
                 if(this.model.get("id")) {
-                    this.model.set("name", window.context.find(".snippetName").val());
-                    this.model.set("code", window.context.find(".snippetCode").val());
-                    this.model.set("description", window.context.find(".snippetDescription").val());
+                    this.model.set("name", encodeURI(window.context.find(".snippetName").val()));
+                    this.model.set("code", encodeURI(window.context.find(".snippetCode").val()));
+                    this.model.set("description", encodeURI(window.context.find(".snippetDescription").val()));
                 } else {
                     window.currentView.collection.create({
                         author: window.user,
-                        name: window.context.find(".snippetName").val(),
-                        code: window.context.find(".snippetCode").val(),
-                        description: window.context.find(".snippetDescription").val(),
+                        name: encodeURI(window.context.find(".snippetName").val()),
+                        code: encodeURI(window.context.find(".snippetCode").val()),
+                        description: encodeURI(window.context.find(".snippetDescription").val()),
                         creationDate: (new Date()).getTime()
                     });
                 }
